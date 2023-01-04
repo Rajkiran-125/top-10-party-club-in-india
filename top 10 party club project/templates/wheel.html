@@ -1,0 +1,72 @@
+{% comment %} {% include 'header.html' %} {% endcomment %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="static/css/wheel.css" />
+
+</div>
+<div class="mainbox" id="mainbox">
+  <div class="box" id="box">
+    <div class="box1">
+      <span class="font span1"><b>50% discount</b></span>
+      <span class="font span2"><b>10% discount</b></span>
+      <span class="font span3"><b>25% discount</b></span>
+      <span class="font span4"><b> Nothing !!!!!!! </b></span>
+      <span class="font span5"><b>75% discount <br />
+        </b></span>
+    </div>
+    <div class="box2">
+      <span class="font span1"><b>B1 & G1 free</b></span>
+      <span class="font span2"><b> Better luck<br />
+          next time!!";</b></span>
+      <span class="font span3"><b>Free Ticket</b></span>
+      <span class="font span4"><b>Exclusive Gift</b></span>
+      <span class="font span5"><b>Gift voucher <br /></b></span>
+    </div>
+  </div>
+  <button class="spin" onclick="spin()">SPIN</button>
+</div>
+<audio controls="controls" id="applause" src="static/wheel/applause.mp3" type="audio/mp3"></audio>
+<audio controls="controls" id="wheel" src="static/wheel/wheel.mp3" type="audio/mp3"></audio>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="static/js/wheel.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    
+  })();
+
+</script>
+<script>
+  try {
+    fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function (response) {
+      return true;
+    }).catch(function (e) {
+      var carbonScript = document.createElement("script");
+      carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+      carbonScript.id = "_carbonads_js";
+      document.getElementById("carbon-block").appendChild(carbonScript);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+</script>
+</body>
+
+{% endblock %}
+
+{% comment %} {% include 'footer.html' %} {% endcomment %}
+
+</html>
+
+&nbsp;&nbsp;&nbsp;<a href="booking"><button style="padding: 10px;background:white;color:black;font-style:oblique;border-radius:120px;cursor:pointer"><b>Apply Token Now</b></button></a>

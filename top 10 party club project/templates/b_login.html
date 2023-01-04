@@ -1,0 +1,38 @@
+{% include 'header.html' %}
+
+{% block content %}
+{% load static %}
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="static/css/log.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Sign in</title>
+</head>
+
+<body>
+  <br><br><br><br>
+  <div class="main">
+    <p class="sign" align="center">You need to first Login</p>
+    <form class="form1" method="post">
+      {% csrf_token %}
+
+      {{form.username}}
+      {{form.password}}
+      
+      <br>
+      <button class="submit" align="center" type="submit" class="signupbtn">Sign In</button><br><br>
+      {% comment %} <p class="forgot" align="center"><a href="#"></p> {% endcomment %}
+      <p class="forgot" align="center"><a href="register">Create Account</p>
+    </form>
+</div>
+     
+</body>
+
+</html>
+{% endblock content %}
+
+{% include 'footer.html' %}

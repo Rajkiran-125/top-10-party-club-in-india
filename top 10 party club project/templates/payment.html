@@ -1,0 +1,42 @@
+{% include 'header.html' %}
+
+{% block content %}
+{% load static %}
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="static/css/log.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Booking</title>
+</head>
+
+<body>
+  <br><br><br><br><br>
+  {% include 'msg.html' %}
+  <div class="main">
+    <p class="sign" align="center">Payment Process</p>
+    
+    <form class="form1" method="post">
+        {% csrf_token %}
+
+      <input type="text" placeholder="Enter Holder Name" required name="hname"><br>
+      <input type="text" placeholder="Credit Card No.1111-2222-3333-4444" name="cno" required><br>
+      <input type="text" placeholder="Exp Month & Year. Sep 2022" name="exp" required><br>
+      <input type="password" placeholder="CVV No.352" name="cvv" required><br>
+      
+       <button class="submit" align="center" type="submit" class="signupbtn">Pay Now</button>
+      {% comment %} <p class="forgot" align="center"><a href="#"></p> {% endcomment %}
+      <p class="forgot" align="center"><a href="/">Home</p>
+    </form>
+</div>
+     
+</body>
+
+</html>
+
+{% endblock content %}
+
+{% include 'footer.html' %}

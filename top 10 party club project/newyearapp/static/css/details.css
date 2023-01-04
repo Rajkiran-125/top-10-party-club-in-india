@@ -1,0 +1,13 @@
+.about a{
+    color: #EE5007;
+    border: 1px solid #EE5007;
+    padding: 7px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.about a:hover{
+    color: white;
+    background-color: #EE5007;
+    transition: 0.5s all ease;
+}

@@ -1,0 +1,136 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Festava Live - Bootstrap 5 CSS Template</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="static/css/templatemo-festava-live.css" rel="stylesheet">
+
+    <link href="static/css/card.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/coundown.css">
+
+    <link rel="stylesheet" href="static/css/details.css">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+   <!-- fontawsome -->
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- chatbot -->
+
+    
+
+    <!-- maps close  -->
+    <!-- fontawsome -->
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--
+TemplateMo 583 Festava Live
+
+https://templatemo.com/tm-583-festava-live
+
+-->
+</head>
+
+<body>
+
+    <main>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container" data-aos="fade-down">
+                <a class="navbar-brand" href="/">
+                    Festava Live
+                </a>
+
+                <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5" data-aos="fade-down">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/">Home</a>
+                            </li>
+                            {% comment %} <li class="nav-item">
+                               <a class="nav-link click-scroll" href="maps"></a>
+                           </li>  {% endcomment %}
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Place</a>
+                            </li>
+
+                             {% comment %} <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_4"></a>
+                             </li>  {% endcomment %}
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="maps">Maps</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="sales">sales</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="chat">Chat with us !</a>
+                            </li>
+                            
+                            
+                            
+                            {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="maps">Hello {{request.user}}!</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="logout">Logout</a>
+                            </li>
+                        </ul>
+                        {% comment %} <a href="login" class="btn custom-btn d-lg-block d-none"></a> {% endcomment %}
+                        
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4"></a>
+                        </li>
+                        <a href="wheel" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
+                    </div>
+
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4"></a>
+                        </li>
+                        <a href="login" class="btn custom-btn d-lg-block d-none">Login</a>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4"></a>
+                        </li>
+                        <a href="b_login" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
+                        {% endif %}
+                </div>
+            </div>
+        </nav>
+
+        {% block content %}
+
+        {% endblock %}

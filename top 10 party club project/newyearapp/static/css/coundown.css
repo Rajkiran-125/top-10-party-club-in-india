@@ -1,0 +1,49 @@
+.coundown-container {
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+ .coundown-container h1 {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+  }
+  
+ .coundown-container li {
+    color: white;
+    display: inline-block;
+    font-size: 1em;
+    list-style-type: none;
+    padding: 2em;
+    text-transform: uppercase;
+  }
+  
+ .coundown-container li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+  
+ .coundown-container .emoji {
+    display: none;
+    padding: 1rem;
+  }
+  
+ .coundown-container .emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+  }
+  
+  @media all and (max-width: 768px) {
+   .coundown-container h1 {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+    
+   .coundown-container li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+    
+   .coundown-container li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+  }
